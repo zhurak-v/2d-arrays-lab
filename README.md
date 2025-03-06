@@ -1,4 +1,4 @@
-# Лабораторна робота з теми: "Операції над двовимірними масивами"
+# Laboratory Work on the Topic: "Operations on Two-Dimensional Arrays"
 
 This project provides utilities for working with matrices in C++. It includes functions for generating random matrices, performing element-wise operations (such as summing and counting negative elements), and printing matrices in a user-friendly format
 

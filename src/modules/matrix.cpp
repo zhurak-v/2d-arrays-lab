@@ -1,6 +1,7 @@
 #include <includes/matrix.hpp>
+#include <includes/types.hpp>
 
-int sumNegativeElements(const std::vector<std::vector<int>>& matrix) {
+int sumNegativeElements(const Matrix& matrix) {
     int sum = 0;
     for (int i = 0; i < matrix.size(); ++i) {
         for (int j = 0; j < matrix[i].size(); ++j) {
@@ -12,7 +13,7 @@ int sumNegativeElements(const std::vector<std::vector<int>>& matrix) {
     return sum;
 }
 
-int countNegativeElements(const std::vector<std::vector<int>>& matrix) {
+int countNegativeElements(const Matrix& matrix) {
     int count = 0;
     for (int i = 0; i < matrix.size(); ++i) {
         for (int j = 0; j < matrix[i].size(); ++j) {

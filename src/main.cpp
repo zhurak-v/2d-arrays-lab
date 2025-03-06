@@ -6,14 +6,14 @@
 
 int main() {
     int m, n;
-    std::cout << "========================================" << std::endl;
     std::cout << "Please type count of rows (m): ";
     std::cin >> m;
     std::cout << "Please type count of columns (n): ";
     std::cin >> n;
 
-    Matrix U(m, MatrixRow(n));
+    Matrix U(m, MatrixRow(n)); 
     fillRandomMatrix(U, -100, 100);
+
     std::cout << "== Matrix was filled a random numbers ==" << std::endl;
 
     std::cout << "Matrix:\n";
