@@ -1,14 +1,15 @@
-#include <includes/random.hpp>
 #include <random>
+#include <includes/random.hpp>
+#include <includes/types.hpp>
 
-void fillRandomMatrix(std::vector<std::vector<int>>& matrix, int min, int max) {
+void fillRandomMatrix(Matrix& matrix, int min, int max) {
     std::random_device rd;
     std::mt19937 gen(rd());
     std::uniform_int_distribution<> dist(min, max);
 
-    for (auto& row : matrix) {
-        for (auto& el : row) {
-            el = dist(gen);
+    for (int i = 0; i < matrix.size(); i++) {
+        for (int j = 0; j < matrix[i].size(); j++) {
+            matrix[i][j] = dist(gen);
         }
     }
 }

@@ -2,10 +2,10 @@
 
 int sumNegativeElements(const std::vector<std::vector<int>>& matrix) {
     int sum = 0;
-    for (const auto& row : matrix) {
-        for (int el : row) {
-            if (el < 0) {
-                sum += el;
+    for (int i = 0; i < matrix.size(); ++i) {
+        for (int j = 0; j < matrix[i].size(); ++j) {
+            if (matrix[i][j] < 0) {
+                sum += matrix[i][j];
             }
         }
     }
@@ -14,9 +14,9 @@ int sumNegativeElements(const std::vector<std::vector<int>>& matrix) {
 
 int countNegativeElements(const std::vector<std::vector<int>>& matrix) {
     int count = 0;
-    for (const auto& row : matrix) {
-        for (int el : row) {
-            if (el < 0) {
+    for (int i = 0; i < matrix.size(); ++i) {
+        for (int j = 0; j < matrix[i].size(); ++j) {
+            if (matrix[i][j] < 0) {
                 count++;
             }
         }

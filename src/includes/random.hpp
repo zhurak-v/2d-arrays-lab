@@ -1,4 +1,4 @@
 #pragma once
-#include <vector>
+#include <includes/types.hpp>
 
-void fillRandomMatrix(std::vector<std::vector<int>>& matrix, int min, int max);
+void fillRandomMatrix(Matrix& matrix, int min, int max);

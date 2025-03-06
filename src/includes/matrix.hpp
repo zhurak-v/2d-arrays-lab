@@ -1,5 +1,5 @@
 #pragma once
-#include <vector>
+#include <includes/types.hpp>
 
-int sumNegativeElements(const std::vector<std::vector<int>>& matrix);
-int countNegativeElements(const std::vector<std::vector<int>>& matrix);
+int sumNegativeElements(const Matrix& matrix);
+int countNegativeElements(const Matrix& matrix);

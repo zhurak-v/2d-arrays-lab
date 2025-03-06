@@ -1,23 +1,25 @@
 #include <iostream>
-#include <vector>
 #include <iomanip>
+#include <includes/types.hpp>
 #include <includes/matrix.hpp>
 #include <includes/random.hpp>
 
 int main() {
     int m, n;
+    std::cout << "========================================" << std::endl;
     std::cout << "Please type count of rows (m): ";
     std::cin >> m;
     std::cout << "Please type count of columns (n): ";
     std::cin >> n;
 
-    std::vector<std::vector<int>> U(m, std::vector<int>(n));
+    Matrix U(m, MatrixRow(n));
     fillRandomMatrix(U, -100, 100);
+    std::cout << "== Matrix was filled a random numbers ==" << std::endl;
 
     std::cout << "Matrix:\n";
-    for (const auto& row : U) {
-        for (int el : row) {
-            std::cout << std::setw(5) << el << " ";
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            std::cout << std::setw(5) << U[i][j] << " ";
         }
         std::cout << std::endl;
     }
