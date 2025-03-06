@@ -3,8 +3,7 @@
 #include <includes/types.hpp>
 
 void fillRandomMatrix(Matrix& matrix, int min, int max) {
-    std::random_device rd;
-    std::mt19937 gen(rd());
+    std::default_random_engine gen(std::random_device{}());
     std::uniform_int_distribution<> dist(min, max);
 
     for (int i = 0; i < matrix.size(); i++) {
